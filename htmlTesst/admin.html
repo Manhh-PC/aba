@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./ico/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./ico/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./ico/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./ico/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./ico/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./ico/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./ico/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./ico/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./ico/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./ico/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./ico/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./ico/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./ico/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="account.css" />
+    <script src="jquery.js"></script>
+    <title>Trang quản trị | Admin</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="demo1" id="dangNhap">
+        <img src="Manhh.png" alt="Logo" class="loGo" />
+        <a href="./login.html" class="logIna">
+          <div class="dangNhap1" style="margin-right: 10px">
+            <i class="fa-regular fa-user"></i>
+            <p>Đăng nhập</p>
+          </div>
+        </a>
+        <a href="cart.html">
+          <div class="gioHang1">
+            <div class="notification">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <p>Giỏ hàng</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="demo2">
+        <div class="danhMuc">
+          <a href="../index.html">
+            <button class="button-menu">
+              <i class="fa-solid fa-house"></i>
+              <span class="text"> Trang Chủ </span>
+            </button>
+          </a>
+        </div>
+        <div class="danhMuc">
+          <a href="">
+            <button class="button-menu">
+              <i class="fa-solid fa-info"></i>
+              <span class="text"> Giới thiệu </span>
+            </button>
+          </a>
+        </div>
+        <div class="danhMuc">
+          <button class="button-menu">
+            <i class="fa-solid fa-store"></i>
+            <span class="text"> Sản phẩm </span>
+          </button>
+        </div>
+        <div class="danhMuc">
+          <button class="button-menu">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span class="text"> Liên hệ </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="khoangCach"></div>
+    <h1 class="admin-text">
+      Danh sách các user trên hệ thống
+    </h1>
+    <div class="container-user" id="userContainer"></div>
+    <h3 ></h3>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

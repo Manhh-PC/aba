@@ -1,0 +1,360 @@
+.container {
+  margin-top: 100px;
+}
+
+#emptyCart {
+  display: none;
+  text-align: center;
+}
+
+#return {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #41b6f1;
+  padding: 17px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+#return:hover {
+  letter-spacing: 2px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+#return:active {
+  letter-spacing: 2.5px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateX(10px);
+  transition: 100ms;
+}
+
+#gioHang {
+  color: deepskyblue;
+  margin-top: 20px;
+}
+
+/* Tích chọn sản phẩm để mua hàng */
+#product-checkbox input {
+  border-radius: 3px;
+}
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  border: solid 1px grey;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: -0.5px;
+  width: 3px;
+  height: 3px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox:checked ~ .checkmark {
+  background-color: #2196f3;
+  box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
+}
+
+.custom-checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+@keyframes checkAnim {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+.custom-checkbox:checked ~ .checkmark:after {
+  animation: checkAnim 0.2s forwards;
+}
+
+.delete-btn {
+  position: relative;
+  padding: 5px 8px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 15px;
+  /* text-transform: uppercase; */
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: transparent;
+  color: red;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.delete-btn:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  color: #fff;
+  transition: all 0.2s ease-out;
+}
+
+.delete-btn:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.delete-btn::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.delete-btn:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+}
+
+#cartTable {
+  border: solid 1px 0px #2196f3;
+  width: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+  display: none;
+}
+
+#cartTable th,
+td {
+  padding: 10px;
+  border-bottom: solid 1px #2196f3;
+}
+
+#cartItems td {
+  /* height: 60px; */
+
+  max-height: 100px;
+  font-size: 14px;
+}
+
+.tenSP {
+  max-width: 270px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  img {
+    margin-right: 6px;
+    width: 60px;
+    /* height: 60px; */
+  }
+}
+
+#totalContainer {
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 18px;
+  position: fixed;
+  bottom: 0px;
+  display: none;
+  background-color: #8dccff;
+  padding: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#totalContainer strong,
+#totalContainer span {
+  color: #fe3287;
+}
+
+span#selectedCount{
+  color: #fff;
+}
+
+span#selectedTotalPrice{
+  color: #fff;
+}
+
+#buyButton {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  background-color: #ff0081;
+  box-shadow: rgba(233, 30, 99, 0.5);
+  margin-left: 8px;
+}
+
+#buyButton::after,
+#buyButton::before {
+  transition: all 0.2s ease-in-out;
+}
+
+#buyButton::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  left: -2em;
+  right: -2em;
+  top: -2em;
+  bottom: -2em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, white 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    /*  */
+      radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, white 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, white 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%, 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+    20% 20%;
+  background-position: 18% 40%, 20% 31%, 30% 30%, 40% 30%, 50% 30%, 57% 30%,
+    65% 30%, 80% 32%, 15% 60%, 83% 60%, 18% 70%, 25% 70%, 41% 70%, 50% 70%,
+    64% 70%, 80% 71%;
+}
+
+#buyButton:hover::before {
+  background-position: 5% 44%, -5% 20%, 7% 5%, 23% 0%, 37% 0, 58% -2%, 80% 0%,
+    100% -2%, -5% 80%, 100% 55%, 2% 100%, 23% 100%, 42% 100%, 60% 95%, 70% 96%,
+    100% 100%;
+  background-size: 0% 0%;
+  transition: background-position 0.5s ease-in-out,
+    background-size 0.75s ease-in-out;
+}
+
+.nutTangGiam {
+  width: 92px;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  border: solid 1.5px #f43567;
+  border-radius: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  input {
+    text-align: center;
+    width: 38px;
+    border: 1.5px solid transparent;
+    border-top: 0;
+    border-bottom: 0;
+    border-color: #f43567;
+    margin: 0;
+  }
+
+  input:focus {
+    outline: none;
+    border-top: 0;
+    border-bottom: 0;
+    border-color: #f43567;
+  }
+
+  button {
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    width: 25px;
+    background-color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+  }
+}
+

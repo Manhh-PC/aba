@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "7df1",
+      "name": "Nguyễn Đức Mạnh",
+      "email": "bluestacks2k6@gmail.com",
+      "password": "1",
+      "cart": []
+    },
+    {
+      "id": "d4iv",
+      "name": "bn",
+      "email": "1@gmail.com",
+      "password": "1",
+      "cart": []
+    },
+    {
+      "id": "7ttc",
+      "name": "Nguyễn Đức Huy",
+      "email": "huy@gmail.com",
+      "password": "1",
+      "cart": []
+    },
+    {
+      "id": "q47h",
+      "name": "Lưu Huy Hoàng",
+      "email": "hoang@gmail.com",
+      "password": "1",
+      "cart": []
+    },
+    {
+      "id": "yjo6",
+      "name": "Hạng Thế Hùng",
+      "email": "hung@gmail.com",
+      "password": "1",
+      "cart": []
+    }
+  ],
+  "currentUser": {
+    "id": "7ttc",
+    "name": "Nguyễn Đức Huy",
+    "email": "huy@gmail.com",
+    "password": "1",
+    "cart": []
+  }
+}

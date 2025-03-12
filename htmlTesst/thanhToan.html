@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="background.css" />
+    <script src="jquery.js"></script>
+    <title>Thanh toán</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="demo1" id="dangNhap">
+        <img src="Manhh.png" alt="Logo" class="loGo" />
+        <a href="./login.html" class="logIna">
+          <div class="dangNhap1" style="margin-right: 10px">
+            <i class="fa-regular fa-user"></i>
+            <p>Đăng nhập</p>
+          </div>
+        </a>
+        <a href="cart.html">
+          <div class="gioHang1">
+            <div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <p>Giỏ hàng</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="demo2">
+        <div class="danhMuc">
+          <a href="../index.html">
+            <button class="button-menu">
+              <i class="fa-solid fa-house"></i>
+              <span class="text"> Trang Chủ </span>
+            </button>
+          </a>
+        </div>
+        <div class="danhMuc">
+          <a href="">
+            <button class="button-menu">
+              <i class="fa-solid fa-info"></i>
+              <span class="text"> Giới thiệu </span>
+            </button>
+          </a>
+        </div>
+        <div class="danhMuc">
+          <button class="button-menu">
+            <i class="fa-solid fa-store"></i>
+            <span class="text"> Sản phẩm </span>
+          </button>
+        </div>
+        <div class="danhMuc">
+          <button class="button-menu">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span class="text"> Liên hệ </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="khoangCach"></div>
+
+    <div class="container-checkout">
+      <div class="hang hang1">
+        <div class="cot1">Sản phẩm</div>
+        <div class="cot2">Đơn giá</div>
+        <div class="cot3">Số lượng</div>
+        <div class="cot4">Thành tiền</div>
+      </div>
+      <div class="hang hang2">
+        <div class="hang DSSP-checkout" id="DSSP-checkout">
+          <div class="cot1">
+            <img
+              src="https://i.pinimg.com/736x/6c/5b/c9/6c5bc9adcb28db946c06dd0f3e6ee656.jpg"
+              alt=""
+              id="productImage"
+            />
+            <span class="TenSP-checkout" id="productName"
+              >Em là ai từ đâu bước đến nơi đây dịu dàng chân phương</span
+            >
+          </div>
+          <div class="cot2" id="productPrice">₫55.000</div>
+          <div class="cot3" id="productQuantity">1</div>
+          <div class="cot4" id="productTotal">₫550.000.000</div>
+        </div>
+      </div>
+      <div class="info-address">
+        <p>Thông tin khách hàng</p>
+        <div class="address-h1">
+          <input
+            type="text"
+            placeholder="Họ và tên"
+            id="tenKhachHang"
+            class="tenKhachHang"
+          />
+          <input
+            type="text"
+            placeholder="Số điện thoại"
+            id="soDienThoai"
+            class="tenKhachHang"
+          />
+        </div>
+        <div class="diaChi">
+          <select
+            class="form-select form-select-sm mb-3"
+            id="city"
+            aria-label=".form-select-sm"
+          >
+            <option value="" selected>Chọn tỉnh thành</option>
+          </select>
+
+          <select
+            class="form-select form-select-sm mb-3"
+            id="district"
+            aria-label=".form-select-sm"
+          >
+            <option value="" selected>Chọn quận huyện</option>
+          </select>
+
+          <select
+            class="form-select form-select-sm"
+            id="ward"
+            aria-label=".form-select-sm"
+          >
+            <option value="" selected>Chọn phường xã</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea id="address" placeholder=" " maxlength="128"></textarea>
+          <label for="address">Địa chỉ cụ thể</label>
+        </div>
+      </div>
+      <div class="hang hang3">
+        <p>Lời nhắn:</p>
+        <textarea id="address" placeholder=" " maxlength="105"></textarea>
+        <label for="address">Lưu ý cho shop</label>
+      </div>
+
+      <div class="hang hang4">
+        <p>Phương thức thanh toán</p>
+        <label for="pay2">
+          <input type="radio" checked="checked" />
+          Thanh toán khi nhận hàng
+        </label>
+      </div>
+
+      <div class="hang hang5">
+        <div class="cot5-1">
+          Tổng số tiền (<span id="SoLuongSP">1000</span>sản phẩm):
+        </div>
+        <div class="cot5-2"><span>₫150.000.000</span></div>
+      </div>
+      <div class="hang hang6"><button class="buy">Đặt hàng</button></div>
+    </div>
+    <div class="khoangCach-end"></div>
+  </body>
+</html>

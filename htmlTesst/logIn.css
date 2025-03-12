@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+  width: 100%;
+  height: 95px;
+  background-color: #41b6f1;
+  border-radius: 0 0 8px 8px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+}
+
+.loGo {
+  display: flex;
+  height: 70px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  border-radius: 25px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eddcd9;
+  height: auto;
+  width: auto;
+  border: 2px solid #264143;
+  border-radius: 20px;
+  box-shadow: 3px 4px 0px 1px #e99f4c;
+}
+
+.title {
+  color: #264143;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.sub_title {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.form_style {
+  outline: none;
+  border: 2px solid #264143;
+  box-shadow: 3px 4px 0px 1px #e99f4c;
+  width: 290px;
+  padding: 12px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.form_style:focus,
+.btn:focus {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #e99f4c;
+}
+
+.btn {
+  padding: 15px;
+  margin: 25px 0px;
+  width: 290px;
+  font-size: 15px;
+  background: #de5499;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 3px 3px 0px 0px #e99f4c;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.link {
+  font-weight: 800;
+  color: #264143;
+  padding: 5px;
+}
+
+.demo1 {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dangNhap1 {
+  border-radius: 25px;
+  width: 100px;
+  max-width: 1200px;
+  margin-right: 15px;
+  height: 27px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.dangNhap1::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ff3377;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.dangNhap1:hover::before {
+  width: 105%;
+}
+
+.dangNhap1:hover {
+  color: #111;
+  border: 2px solid #ff3377;
+}
+
+.dangNhap1 i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.demo1 a {
+  text-decoration: none;
+}
+
+@media (max-width: 411px) {
+  .dangNhap1 p {
+    display: none;
+  }
+  .dangNhap1 {
+    width: 28px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.button-menu {
+  width: 10em;
+  height: 3em;
+  border-radius: 10px;
+  color: white;
+  background-color: #00000000;
+  transition: all 0.5s ease;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.button-menu i {
+  display: none;
+}
+
+.button-menu:hover > i {
+  display: block;
+}
+
+.button-menu:hover > .text {
+  display: none;
+}
+
+.button-menu:hover {
+  background-color: #ff3377;
+  border: 0.15em solid #ff3377;
+  color: #fff;
+}
+
+.button-menu .text {
+  width: 1.5em;
+  margin-top: 3px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.demo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.danhMuc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
+.form_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eddcd9;
+  height: auto;
+  width: auto;
+  border: 2px solid #264143;
+  border-radius: 20px;
+  box-shadow: 3px 4px 0px 1px #e99f4c;
+}
+
+.title {
+  color: #ff0080;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.sub_title {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.form_style {
+  outline: none;
+  border: 2px solid #264143;
+  box-shadow: 3px 4px 0px 1px #e99f4c;
+  width: 270px;
+  padding: 12px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.form_style:focus,
+.btn:focus {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #e99f4c;
+}
+
+.btn {
+  padding: 15px;
+  margin: 25px 0px;
+  width: 200px;
+  font-size: 15px;
+  background: #de5499;
+  border-radius: 10px;
+  font-weight: 900;
+  box-shadow: 3px 3px 0px 0px #e99f4c;
+}
+
+button.btn.inter {
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.link {
+  color: #264143;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.inter {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lexend-deca {
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media (max-width: 690px) {
+  .loGo {
+    width: 60px;
+    height: 60px;
+    left: 5px;
+    transition: 0.5s;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 630px) {
+  .danhMuc {
+    max-width: 135px;
+    span {
+      display: none;
+    }
+    padding-top: 5px;
+  }
+
+  .button-menu i {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  .button-menu {
+    width: 3em;
+    min-width: fit-content;
+  }
+
+  .demo2 {
+    justify-content: space-around;
+    /* margin: 0 15px; */
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: deepskyblue;
+  }
+
+  .loGo {
+    top: 20px;
+    left: 5px;
+    max-width: 55px;
+    max-height: 55px;
+    border-radius: 12px;
+  }
+
+  .form_style {
+    /* transform: scale(0.9); */
+    transition: 0.3s;
+    width: 245px;
+  }
+
+  .form_area {
+    width: 290px;
+  }
+
+  .form_group {
+    width: 270px;
+    input {
+      font-size: 12px;
+    }
+  }
+
+  .btn {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    transform: scale(0.8);
+  }
+}

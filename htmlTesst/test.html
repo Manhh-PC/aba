@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ẩn/Hiện thẻ h3</title>
+    <script src="jquery.js"></script>
+    <style>
+      /* .user-box {
+        border: 1px solid #000;
+        padding: 5px;
+        margin: 10px;
+        width: 90%;
+        max-width: 1250px;
+        height: auto;
+        cursor: pointer;
+        animation: alternate 1s infinite;
+      }
+
+      .list-user {
+        margin: 5px;
+      }
+
+      .user-box p,
+      button {
+        display: none;
+      }
+
+      .user-box button {
+        flex-wrap: nowrap;
+      } */
+
+      .nutTangGiam {
+        width: 92px;
+        height: 30px;
+        margin: 0 auto;
+        display: flex;
+        border: solid 1.5px #f43567;
+        border-radius: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        input {
+          text-align: center;
+          width: 38px;
+          border: 1.5px solid transparent;
+          border-top: 0;
+          border-bottom: 0;
+          border-color: #f43567;
+          margin: 0;
+        }
+
+        input:focus {
+          outline: none;
+          border-top: 0;
+          border-bottom: 0;
+          border-color: #f43567;
+        }
+
+        button {
+          margin: 0;
+          border: none;
+          cursor: pointer;
+          width: 25px;
+          background-color: #fff;
+          text-align: center;
+          font-weight: bold;
+          font-size: 17px;
+        }
+      }
+
+      select:focus{
+        size: 10;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function() {
+          $("#province").select2({
+              width: '200px',
+              dropdownAutoWidth: true
+          });
+      });
+  </script>
+  
+  <style>
+      /* Giảm chiều cao dropdown */
+      .select2-dropdown {
+          max-height: 150px !important; 
+          overflow-y: auto !important;
+      }
+  </style>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <!-- <h1>Danh sách các user trên hệ thống</h1>
+    <div class="container-user">
+      <div class="user-box">
+        <h3 class="list-user"><span>User 1</span></h3>
+        <p class="username">Họ và tên: <span>Nguyễn Văn A</span></p>
+        <p class="user-email">Email: <span>nva@gmail.com</span></p>
+        <p class="user-password">Mật Khẩu: <span>123456</span></p>
+        <div class="user-action">
+          <div
+            style="display: flex; justify-content: space-between; width: 90px"
+          >
+            <button>Sửa</button>
+            <button>Xóa</button>
+          </div>
+        </div>
+      </div>
+      <div class="user-box">
+        <h3 class="list-user"><span>User 2</span></h3>
+        <p class="username">Họ và tên: <span>Nguyễn Văn B</span></p>
+        <p class="user-email">Email: <span>nvb@gmail.com</span></p>
+        <p class="user-password">Mật Khẩu: <span>123456</span></p>
+        <button>Sửa</button>
+        <button>Xóa</button>
+      </div>
+      <div class="user-box">
+        <h3 class="list-user"><span>User 3</span></h3>
+        <p class="username">Họ và tên: <span>Nguyễn Văn C</span></p>
+        <p class="user-email">Email: <span>nvc@gmail.com</span></p>
+        <p class="user-password">Mật Khẩu: <span>123456</span></p>
+        <button>Sửa</button>
+        <button>Xóa</button>
+      </div>
+    </div> -->
+
+    <!-- <div class="nutTangGiam">
+      <button class="button-reduce">-</button>
+      <input
+        type="text"
+        role="spinbutton"
+        aria-valuenow="1"
+        value="1"
+        id="soLuong"
+      />
+      <button class="button-increase">+</button>
+    </div>
+
+    <script>
+      // Lấy các phần tử nút và input
+      const decreaseButton = document.querySelector(".button-reduce");
+      const increaseButton = document.querySelector(".button-increase");
+      const inputField = document.getElementById("soLuong");
+
+      // Xử lý sự kiện nhấn nút giảm
+      decreaseButton.addEventListener("click", function () {
+        let currentValue = parseInt(inputField.value);
+        if (!isNaN(currentValue) && currentValue > 1) {
+          // Kiểm tra nếu giá trị hợp lệ và không giảm dưới 1
+          inputField.value = currentValue - 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút tăng
+      increaseButton.addEventListener("click", function () {
+        let currentValue = parseInt(inputField.value);
+        if (!isNaN(currentValue)) {
+          // Kiểm tra nếu giá trị hợp lệ
+          inputField.value = currentValue + 1;
+        }
+      });
+    </script> -->
+
+    <!-- <script>
+      $(document).ready(function () {
+        $(".user-box").click(function () {
+          $(".user-box p,.user-action button").hide(); // ẩn thẻ h3 và các button
+          $(this).find("p,.user-action button").show(); // hiện thẻ h3 và các button
+        });
+      });
+    </script> -->
+
+    <div>
+      <select
+        class="form-select form-select-sm mb-3"
+        id="city"
+        aria-label=".form-select-sm"
+      >
+        <option value="" selected>Chọn tỉnh thành</option>
+      </select>
+
+      <select
+        class="form-select form-select-sm mb-3"
+        id="district"
+        aria-label=".form-select-sm"
+      >
+        <option value="" selected>Chọn quận huyện</option>
+      </select>
+
+      <select
+        class="form-select form-select-sm"
+        id="ward"
+        aria-label=".form-select-sm"
+      >
+        <option value="" selected>Chọn phường xã</option>
+      </select>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+      var citis = document.getElementById("city");
+      var districts = document.getElementById("district");
+      var wards = document.getElementById("ward");
+      var Parameter = {
+        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+        method: "GET",
+        responseType: "application/json",
+      };
+      var promise = axios(Parameter);
+      promise.then(function (result) {
+        renderCity(result.data);
+      });
+
+      function renderCity(data) {
+        for (const x of data) {
+          citis.options[citis.options.length] = new Option(x.Name, x.Id);
+        }
+        citis.onchange = function () {
+          district.length = 1;
+          ward.length = 1;
+          if (this.value != "") {
+            const result = data.filter((n) => n.Id === this.value);
+
+            for (const k of result[0].Districts) {
+              district.options[district.options.length] = new Option(
+                k.Name,
+                k.Id
+              );
+            }
+          }
+        };
+        district.onchange = function () {
+          ward.length = 1;
+          const dataCity = data.filter((n) => n.Id === citis.value);
+          if (this.value != "") {
+            const dataWards = dataCity[0].Districts.filter(
+              (n) => n.Id === this.value
+            )[0].Wards;
+
+            for (const w of dataWards) {
+              wards.options[wards.options.length] = new Option(w.Name, w.Id);
+            }
+          }
+        };
+      }
+    </script>
+  
+    
+  </body>
+</html>

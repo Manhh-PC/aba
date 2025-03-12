@@ -1,0 +1,386 @@
+body {
+  background-color: #ffffffbd;
+}
+
+.container-account {
+  display: flex;
+  justify-content: center;
+}
+
+.account-name {
+  width: 100%;
+  max-width: 250px;
+  min-width: 202px;
+  height: 280px;
+  background-color: #ffabcf;
+  margin-left: 5px;
+  padding: 15px;
+  margin-right: 15px;
+  line-height: 1.5;
+  border-radius: 5px;
+  img {
+    width: 80px;
+    border-radius: 10px;
+  }
+}
+
+.account-info {
+  max-width: 600px;
+  width: 600px;
+  min-width: 300px;
+  height: 270px;
+  padding: 20px;
+  background-color: #ffabcf;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 1.6;
+  margin-right: 5px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+ul li {
+  list-style-type: none;
+  text-align: start;
+  margin-top: 10px;
+  font-weight: bold;
+  /* color: #6fc5ff; */
+}
+
+li span {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.tenHienThi {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button.nutDangXuat {
+  border: 0;
+  border-radius: 100px;
+  background-color: #2ba8fb;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button.nutDangXuat:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+button.nutDangXuat:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+.edit-account-info {
+  position: absolute;
+  bottom: 0px;
+  left: 55.5%;
+  button {
+    background-color: #eee;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    width: 11em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  button:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+  }
+
+  button:hover:not(:disabled) {
+    background: lightcoral;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+  }
+
+  button:disabled {
+    cursor: auto;
+    color: grey;
+  }
+}
+
+#editForm label {
+  display: block;
+  text-align: end;
+}
+
+.input-edit{
+  width: 80%;
+  height: 25px;
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid #369eff;
+  caret-color: #3f3f3f;
+  background-color: #ffffff;
+  padding: 5px;
+  margin-top: 5px;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.input-edit:focus {
+  border: 2px solid #fa4753;
+  caret-color: #fa4753;
+  color: #fa4753;
+  box-shadow: 4px 4px 10px #070707;
+}
+
+.input-edit:focus::placeholder {
+  color: #fa4753;
+}
+
+#admin-account-info{
+  a{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 9px 16.5px;
+    color: #fff;
+  }
+
+  button{
+    margin: 7px 0;
+    width: 140px;
+    padding: 10px;
+  }
+}
+
+/* admin */
+.container-user {
+  background-color: #ff79af;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 2px 0;
+}
+
+h1.admin-text {
+  color: #ff1453;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.user-box {
+  border: solid 0px;
+  padding: 5px 5px;
+  max-width: 1050px;
+  width: auto;
+  margin: 4px 5px;
+  height: auto;
+  border-radius: 3.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.list-user {
+  margin: 5px;
+}
+
+.user-box p,
+button.button-user {
+  display: none;
+  margin: 5px 0 5px 10px;
+}
+
+.user-box button {
+  padding: 7px 15px;
+}
+
+.user-box:hover {
+  background-color: #e0f7fa;
+}
+
+.button-user {
+  font-size: 13px;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #000;
+  background-color: #ff7ea3;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-user:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button-user:active {
+  transform: translateY(-1px);
+}
+
+/* .edit-form-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  position: absolute;
+  right: 70px;
+  bottom: 6px;
+} */
+
+.no-users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.no-users h2 {
+  color: #555;
+  font-size: 24px;
+}
+
+.input {
+  line-height: 23px;
+  border: 2px solid transparent;
+  border-bottom-color: #777;
+  padding: 0.2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  border-color: #7a9cc6;
+}
+
+.input::placeholder {
+  color: #777;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.user-action {
+  position: absolute;
+  bottom: 2px;
+  right: 62px;
+}
+
+.edit-form {
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+}
+
+@media (max-width: 1040px) {
+  .container-user {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (max-width: 840px) {
+  #editForm label {
+    text-align: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-account {
+    flex-direction: column;
+  }
+
+  .account-name {
+    min-width: 250px;
+    /* width: 90%; */
+    width: calc(100% - 20px);
+    max-width: 600px;
+    margin: 10px;
+    margin-right: 15px;
+    padding: 0;
+  }
+
+  .account-info {
+    min-width: 250px;
+    max-width: 600px;
+    width: calc(100% - 20px);
+    padding: 0;
+    flex-grow: 1;
+    margin: 10px;
+    margin-top: 0;
+  }
+
+  .edit-account-info {
+    left: 35%;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    color: #ff1453;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 470px) {
+  .user-action {
+    position: relative;
+    left: 0;
+    transition: 0.3s;
+    margin-top: 5px;
+  }
+
+  .edit-form {
+    position: relative;
+    bottom: 2px;
+    right: 5px;
+  }
+
+  .edit-account-info {
+    left: 24%;
+    margin-bottom: 5px;
+  }
+
+  .user-box{
+    background-color: rgb(240, 218, 240);
+  }
+}
+
+@media (max-width: 355px) {
+  .input {
+    border: 1.5px solid transparent;
+    border-bottom-color: #777;
+    padding: 0.1rem 0;
+  }
+}
